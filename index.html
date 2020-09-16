@@ -5,14 +5,31 @@
 		
 		<title>Test HTML site</title>
 		
+		<style>
+			.header {
+				height: 120px;
+				background: rgb(2,0,36);
+				background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+			}
+			
+			.main-content {
+				height: 360px;
+			}
+			
+			.footer {
+				height: 120px
+			}
+			
+		</style>
+		
 	</head>
 	
 	<body>
-		<div>
-			<h1>Test Website</h1>
+		<div class="Header">
+			<h1 style="color:white;">Test Website</h1>
 		</div>
 		<hr>
-		<div>
+		<div class="main-content">
 			This is the main Content.
 			<table>
 				<tr><th>Heading 1</th><th>Heading 2</th><th>Heading 3</th></tr>
@@ -21,7 +38,7 @@
 			</table>
 		</div>
 		
-		<div>
+		<div class="footer">
 			This is the footer.
 		</div>
 		
