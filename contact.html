@@ -4,7 +4,13 @@
     <head>
         <link rel="icon" href="favicon.ico" type="image/x-icon">
 		<title>Sneakzrs | Contact</title>
-	    	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	    	<script type="text/javascript">
+		      var onloadCallback = function() {
+			grecaptcha.render('html_element', {
+			  'sitekey' : '6Lft6tQZAAAAAHO5R6LWFDgaqFWvA_4vr50rk7sP'
+			});
+		      };
+		</script>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="theme-color" content="#157878">
@@ -124,11 +130,12 @@
 		</div>
 		
 		<div class="main-content">
-			<form action="confirmed.html" method="POST">
-			      <div class="g-recaptcha" data-sitekey="6Lft6tQZAAAAAHO5R6LWFDgaqFWvA_4vr50rk7sP"></div>
-			      <br/>
-			<input type="submit" value="Submit">
+			<form action="?" method="POST">
+			      <div id="html_element"></div>
+			      <br>
+			      <input type="submit" value="Submit">
 			</form>
+		    	<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 		
 		</div>
 		
