@@ -1,8 +1,9 @@
+<!doctype html>
 
 <html>
     <head>
-		<link rel="icon" href="favicon.ico" type="image/x-icon">
-		<title>Sneakzrs | 404</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+		<title>Sneakzrs | Shop</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="theme-color" content="#157878">
@@ -41,6 +42,21 @@
 				opacity: 1;
 				animation-name: fade-in;
 			}
+			.page-header-p {
+				background: rgb(180,58,58);
+				background: -moz-linear-gradient(90deg, rgba(180,58,58,1) 0%, rgba(253,29,241,1) 50%, rgba(95,252,69,1) 100%);
+				background: -webkit-linear-gradient(90deg, rgba(180,58,58,1) 0%, rgba(253,29,241,1) 50%, rgba(95,252,69,1) 100%);
+				background: linear-gradient(90deg, rgba(180,58,58,1) 0%, rgba(253,29,241,1) 50%, rgba(95,252,69,1) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b43a3a",endColorstr="#5ffc45",GradientType=1);
+				color:#fff;
+				text-align:center;
+				@media screen and (min-width: 64em);
+				padding:5rem 6rem;
+				@media screen and (min-width: 42em) and (max-width: 64em)
+				padding:3rem 4rem;
+				@media screen and (max-width: 42em);
+				padding:2rem 1rem;
+			}
 		</style>
 		<script>
 			document.addEventListener('DOMContentLoaded', function() {
@@ -75,8 +91,7 @@
 			});
 		
 		</script>
-
-	</head>
+    </head>
 
     <body>
 		<svg id="fader"></svg>
@@ -89,20 +104,26 @@
 			}
 		</script>
 		
-        <div class="page-header">
-            <h1>Wow, nice job</h1>
-        </div>
-
-        <div class="section-header">
-            <h1 align="center">You managed to break the website, again.</h1>
-        </div>
-
-        <div class="main-content">
-            <a href="index.html">Back to main page...</a>
-        </div>
+    	<div class="page-header-p" role="banner">
+        	<h1>Sneakzrs</h1>
+			<h2 class="project-tagline">Shop</h2>
+			
+			<a href="index.html" class="btn">Home</a>
+			<a href="about.html" class="btn">About Us</a>
+			<a href="faq.html" class="btn">FAQ</a>
+			<a href="contact.html" class="btn">Contact Us</a>
+			<a href="careers.html" class="btn">Careers</a>
+    	</div>
+	
+		<div class="main-content">
+			<p>Website in Development.</p>
+		</div>
+		
+		<div class="site-footer">
+			<p>Ethan Cherry 2020</p>
+		</div>
 
     </body>
-
 
 
 </html>
