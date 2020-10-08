@@ -1,0 +1,178 @@
+<!doctype html>
+
+<html>
+    <head>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+		<title>Sneakzrs | Careers</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="cayman.css">
+		<script type="text/javascript">
+			  var onloadCallback = function() {
+				grecaptcha.render('html_element', {
+				  'sitekey' : '6Lft6tQZAAAAAHO5R6LWFDgaqFWvA_4vr50rk7sP'
+				});
+			  };
+    	</script>
+		
+		<style>
+			#fader {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 999999;
+				pointer-events: none;
+				background: white;
+				animation-duration: 300ms;
+				animation-timing-function: ease-in-out;
+			}
+			@keyframes fade-out {
+				from { opacity: 1 }
+				  to { opacity: 0 }
+			}
+
+			@keyframes fade-in {
+				from { opacity: 0 }
+				  to { opacity: 1 }
+			}
+
+			#fader.fade-out {
+				opacity: 0;
+				animation-name: fade-out;
+			}
+
+			#fader.fade-in {
+				opacity: 1;
+				animation-name: fade-in;
+			}
+			.page-header-c {
+				backgrbackground: rgb(131,58,180);
+				background: -moz-linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(54,29,253,1) 50%, rgba(252,69,69,1) 100%);
+				background: -webkit-linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(54,29,253,1) 50%, rgba(252,69,69,1) 100%);
+				background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(54,29,253,1) 50%, rgba(252,69,69,1) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#833ab4",endColorstr="#fc4545",GradientType=1);
+				color:#fff;
+				text-align:center;
+				@media screen and (min-width: 64em);
+				padding:5rem 6rem;
+				@media screen and (min-width: 42em) and (max-width: 64em)
+				padding:3rem 4rem;
+				@media screen and (max-width: 42em);
+				padding:2rem 1rem;
+			}
+		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				if (!window.AnimationEvent) { return; }
+				var anchors = document.getElementsByTagName('a');
+				for (var idx=0; idx<anchors.length; idx+=1) {
+					if (anchors[idx].hostname !== window.location.hostname ||
+						anchors[idx].pathname === window.location.pathname) {
+						continue;
+        			}
+					anchors[idx].addEventListener('click', function(event) {
+            			var fader = document.getElementById('fader'),
+                			anchor = event.currentTarget;
+            
+            			var listener = function() {
+							window.location = anchor.href;
+							fader.removeEventListener('animationend', listener);
+            			};
+            			fader.addEventListener('animationend', listener);
+            
+            			event.preventDefault();
+						fader.classList.add('fade-in');
+        			});
+    			}
+			});
+			window.addEventListener('pageshow', function (event) {
+			  if (!event.persisted) {
+				return;
+			  }
+			  var fader = document.getElementById('fader');
+			  fader.classList.remove('fade-in');
+			});
+		
+		</script>
+		
+    </head>
+
+    <body>
+		<svg id="fader"></svg>
+		<script>
+			fadeInPage();
+			function fadeInPage() {
+				if (!window.AnimationEvent) { return; }
+				var fader = document.getElementById('fader');
+				fader.classList.add('fade-out');
+			}
+		</script>
+		
+    	<div class="page-header-c" role="banner">
+        	<h1>Sneakzrs</h1>
+			<h2 class="project-tagline">Careers</h2>
+			
+			<a href="index.html" class="btn">Home</a>
+			<a href="about.html" class="btn">About Us</a>
+			<a href="faq.html" class="btn">FAQ</a>
+			<a href="products.html" class="btn">Shop</a>
+			<a href="contact.html" class="btn">Contact Us</a>
+    	</div>
+	
+		<div class="main-content">
+			<p>Website in Development.</p>
+		</div>
+		
+		<div class="section-header">
+			<h1 align="center">Work with us.</h1>
+		</div>
+		<br><br><br><hr><br><br>
+		<div class="main-content">
+			<p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus, lectus ut mattis tempor, libero quam eleifend tellus, quis dignissim ligula tortor non mi. Morbi ac augue ac magna rhoncus dignissim at vitae justo. Duis blandit diam quis turpis euismod semper. Integer sed ornare diam. Quisque a varius ligula, sit amet porttitor mi. Donec sodales sodales ligula at ornare. Donec nec arcu blandit, euismod nibh quis, vulputate est. Donec nec pretium libero. Mauris bibendum laoreet rutrum. Phasellus ultrices odio sit amet lobortis viverra. Proin nec dapibus augue. Pellentesque vitae mi dapibus, pharetra tortor facilisis, aliquet massa. Sed viverra nec tortor vel eleifend. Sed sit amet porttitor magna. Quisque ut nisi ante.<br>Nulla ac massa et nisl maximus ullamcorper nec eu ex. Integer iaculis, nisl in fringilla blandit, velit quam volutpat dolor, quis vestibulum enim metus vel risus. Donec cursus pulvinar felis, finibus auctor risus scelerisque vitae. Cras egestas sit amet eros condimentum ultricies. Phasellus aliquet vel augue vitae congue. Suspendisse ex erat, faucibus vitae consequat ut, condimentum sollicitudin felis. Nam congue erat a gravida viverra. Aenean ex leo, fermentum a tincidunt vitae, pharetra sit amet est. Nunc iaculis vitae mi ac tincidunt. Sed laoreet quis arcu eget bibendum. Mauris placerat porttitor mauris, vitae pellentesque sapien vehicula ut. Sed a leo at metus ornare dapibus. Phasellus vel congue nunc. Sed in maximus massa, eget ultrices nisi. Sed eu rutrum lectus, ac pretium elit.<br>Sed tempor nisi sit amet nisl interdum, eu volutpat ante gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse at ipsum lectus. Nunc congue dui nisl, at pretium metus consectetur vel. Nunc pretium sagittis ipsum, et mollis elit consequat at. Duis risus leo, rhoncus et tristique sit amet, sagittis et turpis. Nam est lectus, accumsan in mauris at, tincidunt hendrerit purus. Integer at volutpat urna, ac finibus erat. Suspendisse a dolor eget sem iaculis placerat. Quisque at ante nulla. Aenean ut malesuada neque.<br>Maecenas varius purus tincidunt, vestibulum diam vel, feugiat felis. Morbi justo lectus, varius vitae tortor at, interdum facilisis mauris. Donec ac urna a enim congue convallis vel a dolor. Nunc porta magna quis finibus feugiat. Aliquam sed justo vel diam egestas rutrum. Donec eu viverra lectus. Donec arcu tortor, posuere vel volutpat a, suscipit vel odio. Pellentesque congue convallis turpis, vitae pulvinar felis sollicitudin porta. Nulla id gravida sem. Pellentesque cursus nisl sit amet ipsum egestas, non congue mi venenatis. Sed venenatis turpis id nisl porttitor venenatis. Nullam pharetra tortor purus, ut luctus elit viverra sed. Curabitur non magna lacinia, ultricies mi vitae, auctor magna.<br>Morbi porta lectus at nunc faucibus, ut fermentum lacus vehicula. Vivamus tincidunt orci vitae mi euismod suscipit. Praesent sit amet erat nec velit tincidunt feugiat. Nunc est orci, porta vel elementum eget, aliquam sit amet dui. Mauris tincidunt, tellus sit amet vehicula porta, sem lectus sollicitudin arcu, eget cursus sapien odio sit amet libero. Morbi aliquam eleifend ipsum a lacinia. Vestibulum eget pharetra dolor. Donec est massa, gravida fringilla auctor eu, pellentesque in nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer lobortis interdum est, at suscipit purus varius a. Duis leo nisl, varius faucibus tristique vitae, mattis quis neque. Cras venenatis volutpat commodo.<br></p>
+			<br><hr>
+		
+		</div>
+		
+		<div class="main-content">
+			<h1>Apply Now: </h1>
+			<br><hr><form action="confirmed.html">
+				<label for="fname">First name: </label>
+				<input type="text" id="fname" name="fname" required><br><br>
+				<label for="email">Email: </label>
+				<input type="email" id="email" name="email" required><br><br>
+				<label for="email">Message: </label>
+				<br>
+				<input type="text" id="email" name="email" width="100" height="100" required><br><br>
+			  <div id="html_element"></div>
+			  <br>
+			  <input type="submit" value="Submit">
+    		</form>
+			<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+			
+			</form>
+		</div>
+	<br><br><hr><br>
+	<div class="main-content">
+		<p>Staff Login: </p>
+		<form action="confirmed.html">
+		<label for="fname">Email: </label>
+		<input type="email" id="fname" name="fname" required><br><br>
+		<label for="pw">Password: </label>
+		<input type="text" id="email" name="email" required><br><br>
+		<input type="submit" value="Submit">
+		</form>
+	<hr><br>
+	</div>
+		
+		<div class="site-footer">
+			<p>Ethan Cherry 2020</p>
+		</div>
+
+    </body>
+
+
+</html>

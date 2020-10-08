@@ -1,0 +1,156 @@
+<!doctype html>
+
+<html>
+    <head>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+		<title>Sneakzrs | Contact</title>
+		 <script type="text/javascript">
+			  var onloadCallback = function() {
+				grecaptcha.render('html_element', {
+				  'sitekey' : '6Lft6tQZAAAAAHO5R6LWFDgaqFWvA_4vr50rk7sP'
+				});
+			  };
+    	</script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#157878">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="stylesheet" href="cayman.css">
+		<style>
+			#fader {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 999999;
+				pointer-events: none;
+				background: white;
+				animation-duration: 300ms;
+				animation-timing-function: ease-in-out;
+			}
+			@keyframes fade-out {
+				from { opacity: 1 }
+				  to { opacity: 0 }
+			}
+
+			@keyframes fade-in {
+				from { opacity: 0 }
+				  to { opacity: 1 }
+			}
+
+			#fader.fade-out {
+				opacity: 0;
+				animation-name: fade-out;
+			}
+
+			#fader.fade-in {
+				opacity: 1;
+				animation-name: fade-in;
+			}
+			.page-header-con {
+				background: rgb(0,14,255);
+				background: -moz-linear-gradient(90deg, rgba(0,14,255,1) 0%, rgba(44,132,217,1) 50%, rgba(253,29,222,1) 100%);
+				background: -webkit-linear-gradient(90deg, rgba(0,14,255,1) 0%, rgba(44,132,217,1) 50%, rgba(253,29,222,1) 100%);
+				background: linear-gradient(90deg, rgba(0,14,255,1) 0%, rgba(44,132,217,1) 50%, rgba(253,29,222,1) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000eff",endColorstr="#fd1dde",GradientType=1);
+				color:#fff;
+				text-align:center;
+				@media screen and (min-width: 64em);
+				padding:5rem 6rem;
+				@media screen and (min-width: 42em) and (max-width: 64em)
+				padding:3rem 4rem;
+				@media screen and (max-width: 42em);
+				padding:2rem 1rem;
+			}
+		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				if (!window.AnimationEvent) { return; }
+				var anchors = document.getElementsByTagName('a');
+				for (var idx=0; idx<anchors.length; idx+=1) {
+					if (anchors[idx].hostname !== window.location.hostname ||
+						anchors[idx].pathname === window.location.pathname) {
+						continue;
+        			}
+					anchors[idx].addEventListener('click', function(event) {
+            			var fader = document.getElementById('fader'),
+                			anchor = event.currentTarget;
+            
+            			var listener = function() {
+							window.location = anchor.href;
+							fader.removeEventListener('animationend', listener);
+            			};
+            			fader.addEventListener('animationend', listener);
+            
+            			event.preventDefault();
+						fader.classList.add('fade-in');
+        			});
+    			}
+			});
+			window.addEventListener('pageshow', function (event) {
+			  if (!event.persisted) {
+				return;
+			  }
+			  var fader = document.getElementById('fader');
+			  fader.classList.remove('fade-in');
+			});
+		
+		</script>
+    </head>
+
+    <body>
+		<svg id="fader"></svg>
+		<script>
+			fadeInPage();
+			function fadeInPage() {
+				if (!window.AnimationEvent) { return; }
+				var fader = document.getElementById('fader');
+				fader.classList.add('fade-out');
+			}
+		</script>
+		
+    	<div class="page-header-con" role="banner">
+        	<h1>Sneakzrs</h1>
+			<h2 class="project-tagline">Contact Us</h2>
+			
+			<a href="index.html" class="btn">Home</a>
+			<a href="about.html" class="btn">About Us</a>
+			<a href="faq.html" class="btn">FAQ</a>
+			<a href="products.html" class="btn">Shop</a>
+			<a href="careers.html" class="btn">Careers</a>
+    	</div>
+	
+		<div class="main-content">
+			<p>Website in Development.</p>
+		</div>
+		
+		<div class="section-header">
+			<h1 align="center">Need to contact us?<br> No worries.</h1>
+		</div>
+		
+		<div class="main-content">
+			<form action="?" method="POST">
+				<label for="fname">First name: </label>
+				<input type="text" id="fname" name="fname" required><br><br>
+				<label for="email">Email: </label>
+				<input type="email" id="email" name="email" required><br><br>
+				<label for="email">Message: </label>
+				<br>
+				<input type="text" id="email" name="email" width="100" height="100" required><br><br>
+			  <div id="html_element"></div>
+			  <br>
+			  <input type="submit" value="Submit">
+    		</form>
+			<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+		
+		</div>
+		
+		<div class="site-footer">
+			<p>Ethan Cherry 2020</p>
+		</div>
+
+    </body>
+
+
+</html>
