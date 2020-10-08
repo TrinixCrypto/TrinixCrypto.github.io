@@ -54,7 +54,19 @@
 		</script>
 		
 		<div class="page-header">
-			<h1>Thank You <?php $_GET["fname"]?>.</h1>
+			<h1>Thank You <?php echo $_POST["fname"]?>.</h1>
+			<div class="project-tagline"><h2>Sneakzrs</h2></div>
+			<a href="index.html" class="btn">Home</a>
+		</div>
+		
+		<div class="main-content">
+			<p>Your Feedback is greatly Appreciated.<br>
+			We will keep in contact at: <?php echo $_POST["email"]?><br>
+			<hr>
+			<br>
+			Your Message:<br> <?php echo $_POST["msg"]?><br>
+			</p>
+		
 		</div>
 	</body>
 </html>
